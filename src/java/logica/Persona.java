@@ -1,18 +1,25 @@
-
 package logica;
 
-/**
- *
- * @author jmro
- */
-public class Persona {
+import java.io.Serializable;
+import javax.persistence.Basic;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
+public class Persona implements Serializable {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
+    @Basic
     private String dni;
     private String nombre;
     private String apellido;
     private String telefono;
-    
-    public Persona(){
+
+    public Persona() {
     }
 
     public Persona(int id, String dni, String nombre, String apellido, String telefono) {
@@ -22,16 +29,6 @@ public class Persona {
         this.apellido = apellido;
         this.telefono = telefono;
     }
-
-    public String getTelefono() {
-        return telefono;
-    }
-
-    public void setTelefono(String telefono) {
-        this.telefono = telefono;
-    }
-
- 
 
     public int getId() {
         return id;
@@ -64,6 +61,13 @@ public class Persona {
     public void setApellido(String apellido) {
         this.apellido = apellido;
     }
-    
-    
+
+    public String getTelefono() {
+        return telefono;
+    }
+
+    public void setTelefono(String telefono) {
+        this.telefono = telefono;
+    }
+
 }

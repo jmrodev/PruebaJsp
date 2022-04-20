@@ -24,14 +24,14 @@
         <h1>Lista de Personas</h1>
         <p>Si desea ver la lista haga click en mostrar</p>
         
-        <form action="" method="" >
+        <form action="SvPersona" method="GET" >
             <button type="submit">Mostrar</button>
         </form>
         
         <h1>Eliminar</h1>
         <p>Ingrese dni</p>
-                <form action="" method="">
-                    <p><label>Dni:</label><input type="text" name="dni_elim"></p>
+                <form action="SvEliminar" method="Post">
+                    <p><label>Id:</label><input type="text" name="id_eliminar"></p>
                     <input type="submit">Eliminar<button/>
                 </form>
     </body>
